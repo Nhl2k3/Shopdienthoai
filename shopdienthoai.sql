@@ -1,23 +1,49 @@
 -- Database: `shopdienthoai`
 CREATE DATABASE `shopdienthoai` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `shopdienthoai`;
+
+-- 
+-- Tạo bảng nhà sản xuất
+--
+
+DROP TABLE IF EXISTS NhaSanXuat;
+CREATE TABLE IF NOT EXISTS NhaSanXuat (
+  MaNSX int(20) NOT NULL AUTO_INCREMENT,
+  TenNSX varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (MaNSX)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+
+--
+-- Thêm dữ liệu cho nhà sản xuất
+--
+
+INSERT INTO NhaSanXuat (MaNSX, TenNSX) VALUES
+(1, 'Samsung'),
+(2, 'Apple'),
+(3, 'Xiaomi'),
+(4, 'OPPO'),
+(5, 'Realme'),
+(6, 'Lenovo');
+(7, 'Sony');
+
 -- Tạo bảng cho các sản phẩm điện thoại
 CREATE TABLE DienThoai (
     ma_dien_thoai INT PRIMARY KEY,
-    hang_san_xuat NVARCHAR(50),
+    MaNSX int(20) NOT NULL,
     model NVARCHAR(50),
     dung_luong_luu_tru INT,
     mau_sac NVARCHAR(20),
-    gia DECIMAL(10, 2)
+    gia DECIMAL(10, 2),
+    CONSTRAINT fk_MaNSX FOREIGN KEY (MaNSX) REFERENCES NhaSanXuat(MaNSX)
 );
 -- Chèn dữ liệu cho 5 điện thoại vào bảng DienThoai
-INSERT INTO DienThoai (ma_dien_thoai, hang_san_xuat, model, dung_luong_luu_tru, mau_sac, gia) 
+INSERT INTO DienThoai (ma_dien_thoai, MaNSX, model, dung_luong_luu_tru, mau_sac, gia) 
 VALUES 
-(1, 'Samsung', 'Galaxy S21', 256, 'Đen', 20990000),
-(2, 'Apple', 'iPhone 12 Pro', 256, 'Xám', 31990000),
-(3, 'Xiaomi', 'Redmi Note 10 Pro', 128, 'Xanh', 7990000),
-(4, 'OPPO', 'Reno6', 128, 'Trắng', 11990000),
-(5, 'Realme', '8 Pro', 128, 'Vàng', 8990000);
+(1, 1, 'Galaxy S21', 256, 'Đen', 20990000),
+(2, 2, 'iPhone 12 Pro', 256, 'Xám', 31990000),
+(3, 3, 'Redmi Note 10 Pro', 128, 'Xanh', 7990000),
+(4, 4, 'Reno6', 128, 'Trắng', 11990000),
+(5, 5, '8 Pro', 128, 'Vàng', 8990000);
 
 
 -- Tạo bảng cho các thông số kỹ thuật của điện thoại
