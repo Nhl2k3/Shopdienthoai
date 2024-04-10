@@ -33,17 +33,19 @@ CREATE TABLE DienThoai (
     model NVARCHAR(50),
     dung_luong_luu_tru INT,
     mau_sac NVARCHAR(20),
+    hinh varchar(200) COLLATE utf8_unicode_ci NOT NULL,
     gia DECIMAL(10, 2),
+    ti_le_gg INT(4) NOT NULL,
     CONSTRAINT fk_MaNSX FOREIGN KEY (MaNSX) REFERENCES NhaSanXuat(MaNSX)
 );
 -- Chèn dữ liệu cho 5 điện thoại vào bảng DienThoai
-INSERT INTO DienThoai (ma_dien_thoai, MaNSX, model, dung_luong_luu_tru, mau_sac, gia) 
+INSERT INTO DienThoai (ma_dien_thoai, MaNSX, model, dung_luong_luu_tru, mau_sac, hinh, gia, ti_le_gg) 
 VALUES 
-(1, 1, 'Galaxy S21', 256, 'Đen', 20990000),
-(2, 2, 'iPhone 12 Pro', 256, 'Xám', 31990000),
-(3, 3, 'Redmi Note 10 Pro', 128, 'Xanh', 7990000),
-(4, 4, 'Reno6', 128, 'Trắng', 11990000),
-(5, 5, '8 Pro', 128, 'Vàng', 8990000);
+(1, 1, 'Galaxy S21', 256, 'images/galaxys21den.jpg', 'Đen', 20990000, 10),
+(2, 2, 'iPhone 12 Pro', 256, 'images/iphone12proxam.jpg', 'Xám', 31990000, 15),
+(3, 3, 'Redmi Note 10 Pro', 128, 'images/redminote10proxanh.jpg', 'Xanh', 7990000, 20),
+(4, 4, 'Oppo Reno6', 128, 'images/opporeno6den.jpg', 'Đen', 11990000, 15),
+(5, 5, 'Realme 8 Pro', 128, 'images/realme8provang.jpg', 'Vàng', 8990000, 10);
 
 
 -- Tạo bảng cho các thông số kỹ thuật của điện thoại
@@ -130,3 +132,31 @@ VALUES
 (3, 3, 3, 1, 7990000),
 (4, 4, 4, 1, 11990000),
 (5, 5, 5, 1, 8990000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table NguoiDung
+--
+
+DROP TABLE IF EXISTS NguoiDung;
+CREATE TABLE IF NOT EXISTS NguoiDung (
+  MaNguoiDung int(10) NOT NULL,
+  TenNguoiDung varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  TenDangNhap varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  MatKhau varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  QuyenHan tinyint(1) NOT NULL,
+  Khoa tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table NguoiDung
+--
+
+INSERT INTO NguoiDung (MaNguoiDung, TenNguoiDung, TenDangNhap, MatKhau, QuyenHan, Khoa) VALUES
+(1, 'Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
+(2, 'Nguyễn Văn Hùng', 'nvhung', 'e10adc3949ba59abbe56e057f20f883e 	', 1, 0),
+(3, 'Nguễn Thị D', 'ntd', 'e10adc3949ba59abbe56e057f20f883e', 2, 0),
+(4, 'Trần Văn C', 'tvc123456', 'e10adc3949ba59abbe56e057f20f883e', 2, 0);
+
+-- --------------------------------------------------------
