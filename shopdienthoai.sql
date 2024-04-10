@@ -41,11 +41,11 @@ CREATE TABLE DienThoai (
 -- Chèn dữ liệu cho 5 điện thoại vào bảng DienThoai
 INSERT INTO DienThoai (ma_dien_thoai, MaNSX, model, dung_luong_luu_tru, mau_sac, hinh, gia, ti_le_gg) 
 VALUES 
-(1, 1, 'Galaxy S21', 256, 'images/galaxys21den.jpg', 'Đen', 20990000, 10),
-(2, 2, 'iPhone 12 Pro', 256, 'images/iphone12proxam.jpg', 'Xám', 31990000, 15),
-(3, 3, 'Redmi Note 10 Pro', 128, 'images/redminote10proxanh.jpg', 'Xanh', 7990000, 20),
-(4, 4, 'Oppo Reno6', 128, 'images/opporeno6den.jpg', 'Đen', 11990000, 15),
-(5, 5, 'Realme 8 Pro', 128, 'images/realme8provang.jpg', 'Vàng', 8990000, 10);
+(1, 1, 'Galaxy S21', 256, 'Đen', 'images/galaxys21den.jpg', 20990000, 10),
+(2, 2, 'iPhone 12 Pro', 256, 'Xám', 'images/iphone12proxam.jpg', 31990000, 15),
+(3, 3, 'Redmi Note 10 Pro', 128, 'Xanh', 'images/redminote10proxanh.jpg', 7990000, 20),
+(4, 4, 'Oppo Reno6', 128, 'Đen', 'images/opporeno6den.jpg', 11990000, 15),
+(5, 5, 'Realme 8 Pro', 128, 'Vàng', 'images/realme8provang.jpg', 8990000, 10);
 
 
 -- Tạo bảng cho các thông số kỹ thuật của điện thoại
