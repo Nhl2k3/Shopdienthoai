@@ -23,7 +23,7 @@ INSERT INTO NhaSanXuat (MaNSX, TenNSX) VALUES
 (3, 'Xiaomi'),
 (4, 'OPPO'),
 (5, 'Realme'),
-(6, 'Lenovo');
+(6, 'Lenovo'),
 (7, 'Sony');
 
 -- Tạo bảng cho các sản phẩm điện thoại
