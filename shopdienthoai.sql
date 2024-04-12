@@ -1,26 +1,52 @@
 -- Database: `shopdienthoai`
 CREATE DATABASE `shopdienthoai` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `shopdienthoai`;
+-- 
+-- Tạo bảng nhà sản xuất
+--
+DROP TABLE IF EXISTS NhaSanXuat;
+CREATE TABLE IF NOT EXISTS NhaSanXuat (
+  MaNSX int(20) NOT NULL AUTO_INCREMENT,
+  TenNSX varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (MaNSX)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+--
+-- Thêm dữ liệu cho nhà sản xuất
+--
+INSERT INTO NhaSanXuat (MaNSX, TenNSX) VALUES
+(1, 'Samsung'),
+(2, 'Apple'),
+(3, 'Xiaomi'),
+(4, 'OPPO'),
+(5, 'Realme'),
+(6, 'Lenovo'),
+(7, 'Sony');
 -- Tạo bảng cho các sản phẩm điện thoại
 CREATE TABLE DienThoai (
     ma_dien_thoai INT PRIMARY KEY,
-    hang_san_xuat NVARCHAR(50),
+    MaNSX int(20) NOT NULL,
     model NVARCHAR(50),
     dung_luong_luu_tru INT,
     mau_sac NVARCHAR(20),
-    gia DECIMAL(10, 2)
+    hinh varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+    gia DECIMAL(10, 2),
+    ti_le_gg INT(4) NOT NULL,
+	LuotXem int(11) NOT NULL,
+	SoLuong int(10) NOT NULL,
+    CONSTRAINT fk_MaNSX FOREIGN KEY (MaNSX) REFERENCES NhaSanXuat(MaNSX)
 );
 -- Chèn dữ liệu cho 5 điện thoại vào bảng DienThoai
-INSERT INTO DienThoai (ma_dien_thoai, hang_san_xuat, model, dung_luong_luu_tru, mau_sac, gia) 
+INSERT INTO DienThoai (ma_dien_thoai, MaNSX, model, dung_luong_luu_tru, mau_sac, hinh, gia, ti_le_gg, LuotXem, SoLuong) 
 VALUES 
-(1, 'Samsung', 'Galaxy S21', 256, 'Đen', 20990000),
-(2, 'Apple', 'iPhone 12 Pro', 256, 'Xám', 31990000),
-(3, 'Xiaomi', 'Redmi Note 10 Pro', 128, 'Xanh', 7990000),
-(4, 'OPPO', 'Reno6', 128, 'Trắng', 11990000),
-(5, 'Realme', '8 Pro', 128, 'Vàng', 8990000);
+(1, 1, 'Galaxy S21', 256, 'Đen', 'images/galaxys21den.jpg', 20990000, 10,252,111),
+(2, 2, 'iPhone 12 Pro', 256, 'Xám', 'images/iphone12proxam.jpg', 31990000, 15,262,200),
+(3, 3, 'Redmi Note 10 Pro', 128, 'Xanh', 'images/redminote10proxanh.jpg', 7990000, 20,111,365),
+(4, 4, 'Oppo Reno6', 128, 'Đen', 'images/opporeno6den.jpg', 11990000, 15,305,156),
+(5, 5, 'Realme 8 Pro', 128, 'Vàng', 'images/realme8provang.jpg', 8990000, 10,222,449);
 
 
 -- Tạo bảng cho các thông số kỹ thuật của điện thoại
+   
 CREATE TABLE ThongSoKyThuatDienThoai (
     ma_thong_so_ky_thuat INT PRIMARY KEY,
     ma_dien_thoai INT,
@@ -33,24 +59,18 @@ CREATE TABLE ThongSoKyThuatDienThoai (
 -- Chèn thông số kỹ thuật cho điện thoại Samsung Galaxy S21
 INSERT INTO ThongSoKyThuatDienThoai (ma_thong_so_ky_thuat, ma_dien_thoai, CPU, RAM, kich_thuoc_man_hinh, do_phan_giai_camera) 
 VALUES (1, 1, 'Exynos 2100', 8, 6.2, 108);
-
 -- Chèn thông số kỹ thuật cho điện thoại iPhone 12 Pro
 INSERT INTO ThongSoKyThuatDienThoai (ma_thong_so_ky_thuat, ma_dien_thoai, CPU, RAM, kich_thuoc_man_hinh, do_phan_giai_camera) 
 VALUES (2, 2, 'Apple A14 Bionic', 6, 6.1, 12);
-
 -- Chèn thông số kỹ thuật cho điện thoại Xiaomi Redmi Note 10 Pro
 INSERT INTO ThongSoKyThuatDienThoai (ma_thong_so_ky_thuat, ma_dien_thoai, CPU, RAM, kich_thuoc_man_hinh, do_phan_giai_camera) 
 VALUES (3, 3, 'Qualcomm Snapdragon 732G', 6, 6.67, 108);
-
 -- Chèn thông số kỹ thuật cho điện thoại OPPO Reno6
 INSERT INTO ThongSoKyThuatDienThoai (ma_thong_so_ky_thuat, ma_dien_thoai, CPU, RAM, kich_thuoc_man_hinh, do_phan_giai_camera) 
 VALUES (4, 4, 'MediaTek Dimensity 900', 8, 6.43, 64);
-
 -- Chèn thông số kỹ thuật cho điện thoại Realme 8 Pro
 INSERT INTO ThongSoKyThuatDienThoai (ma_thong_so_ky_thuat, ma_dien_thoai, CPU, RAM, kich_thuoc_man_hinh, do_phan_giai_camera) 
 VALUES (5, 5, 'Qualcomm Snapdragon 720G', 8, 6.4, 108);
-
-
 -- Tạo bảng cho thông tin của các khách hàng
 CREATE TABLE KhachHang (
     ma_khach_hang INT PRIMARY KEY,
@@ -67,8 +87,6 @@ VALUES
 (3, 'Lê Văn C', 'levanc@example.com', '0909090909', '789 Đường GHI, Quận RST'),
 (4, 'Phạm Thị D', 'phamthid@example.com', '0363636363', '101 Đường JKL, Quận MNO'),
 (5, 'Hoàng Văn E', 'hoangvane@example.com', '0777777777', '202 Đường PQR, Quận STU');
-
-
 -- Tạo bảng cho các đơn hàng
 CREATE TABLE DonHang (
     ma_don_hang INT PRIMARY KEY,
@@ -85,7 +103,6 @@ VALUES
 (3, 3, '2024-04-08', 7990000),
 (4, 4, '2024-04-07', 11990000),
 (5, 5, '2024-04-06', 8990000);
-
 -- Tạo bảng cho chi tiết đơn hàng
 CREATE TABLE ChiTietDonHang (
     ma_chi_tiet_don_hang INT PRIMARY KEY,
@@ -104,3 +121,25 @@ VALUES
 (3, 3, 3, 1, 7990000),
 (4, 4, 4, 1, 11990000),
 (5, 5, 5, 1, 8990000);
+-- --------------------------------------------------------
+--
+-- Table structure for table NguoiDung
+--
+DROP TABLE IF EXISTS NguoiDung;
+CREATE TABLE IF NOT EXISTS NguoiDung (
+  MaNguoiDung int(10) NOT NULL,
+  TenNguoiDung varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  TenDangNhap varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  MatKhau varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  QuyenHan tinyint(1) NOT NULL,
+  Khoa tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+--
+-- Dumping data for table NguoiDung
+--
+INSERT INTO NguoiDung (MaNguoiDung, TenNguoiDung, TenDangNhap, MatKhau, QuyenHan, Khoa) VALUES
+(1, 'Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
+(2, 'Nguyễn Văn Hùng', 'nvhung', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
+(3, 'Nguễn Thị D', 'ntd', 'e10adc3949ba59abbe56e057f20f883e', 2, 0),
+(4, 'Trần Văn C', 'tvc123456', 'e10adc3949ba59abbe56e057f20f883e', 2, 0);
+-- --------------------------------------------------------
