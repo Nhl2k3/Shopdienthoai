@@ -16,13 +16,13 @@
 		$limit_ok =  $_SESSION['limit'];
 		//echo $limit_ok;
 		
-		$ MaNSX = $_GET["id_nsx"];
+		$MaNSX = $_GET["id_nsx"];
 
-		$sql1 =  "select * from NhaSanXuat where  MaNSX='" . $ MaNSX . "'"; 
+		$sql1 =  "select * from NhaSanXuat where  MaNSX='" . $MaNSX . "'"; 
 		$danhsach1 = $connect->query($sql1);
 		$row1 = $danhsach1->fetch_array(MYSQLI_ASSOC);
     
-        $sql2 =  "select * from DienThoai where  MaNSX='" . $ MaNSX . "' ORDER by ` ma_dien_thoai` DESC  LIMIT 0, ".$limit_ok; 
+        $sql2 =  "select * from DienThoai where  MaNSX='" . $MaNSX . "' ORDER by ` ma_dien_thoai` DESC  LIMIT 0, ".$limit_ok; 
 		
 		$danhsach = $connect->query($sql2);
 		
