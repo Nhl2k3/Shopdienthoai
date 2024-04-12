@@ -69,7 +69,7 @@
 							
 								while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 
 								{
-    								echo "<li><a href='index.php?do=dienthoai_nhasanxuat&id_nsx=" . $row[' MaNSX'] . "'>" . $row['TenNSX'] . "</a></li>";   
+    								echo "<li><a href='index.php?do=dienthoai_nhasanxuat&id_nsx=" . $row['MaNSX'] . "'>" . $row['TenNSX'] . "</a></li>";   
   								}
 							?>  
 						  

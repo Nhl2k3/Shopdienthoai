@@ -39,14 +39,14 @@
                     $giaban = $row['gia'] - (($row['ti_le_gg'] /100) * $row['gia']);
                     echo "<div class='khungsanpham'>";
                         echo "<div class='card'>";					
-                            echo "<a href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>";
-                                echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  style='width: 190px; height: 140px;'>";
+                            echo "<a href='index.php?do=sanpham_chitiet&id_sp=id_ma_dien_thoai" . $row[' ma_dien_thoai'] . "&id_nsx=" . $row['MaNSX'] . "'>";
+                                echo "<img class='hinhanhphim' src=" . $row["hinh"] . "  style='width: 190px; height: 140px;'>";
                                 echo "<span class='tenphim' ></span> <br />";
                             echo "</a>";
                             echo "<span class=\"luotxem\">". $row['LuotXem'] ." lượt xem </span><span class=\"giaban\">". number_format($giaban)." đ</span>";
-                            echo "<br /><span class=\"luotxem\"></span><span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
+                            echo "<br /><span class=\"luotxem\"></span><span class=\"dongia\">". number_format($row['gia'])." đ</span>";
                         echo "</div>";
-                        echo "<p><a  href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>" . $row['TenSanPham'] . "</a></p>";
+                        echo "<p><a  href='index.php?do=dienthoai_thongsokythuat&id_ma_dien_thoai=" . $row['ma_dien_thoai'] . "&id_nsx=" . $row[' MaNSX'] . "'>" . $row[' model'] . "</a></p>";
                         
                     echo "</div>";
                     
