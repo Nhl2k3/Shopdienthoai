@@ -101,11 +101,11 @@ CREATE TABLE `tbl_sanpham` (
 -- Dumping data for table `tbl_sanpham_dienthoai`
 --
 INSERT INTO `tbl_sanpham`(`IdSanPham`, `MaSanPham`, `TenSanPham`, `IdNhaSanXuat`, `HinhAnh`, `DonGia`, `MoTa`, `SoLuong`, `TiLeGiamGia`, `CauHinh`, `LuotXem`) VALUES
-(1, 'SP001', 'Galaxy S21', 256, 'images/galaxys21den.jpg', 20990000, 'Samsung Galaxy S21: Smartphone 5G mạnh mẽ với màn hình 120Hz mượt mà, camera ấn tượng và thiết kế sang trọng.', 500, 10,'<h1>Điện thoại Samsung Galaxy S21 5G Snapdragon 888/8GB/128GB/6.2&quot;AMOLED/Android 11</h1>\r\n' ,252),
-(2, 'SP002', 'iPhone 12 Pro', 256, 'images/iphone12proxam.jpg', 31990000, 'iPhone 12 Pro: Chiếc điện thoại cao cấp với thiết kế sang trọng, hiệu năng mạnh mẽ, camera ấn tượng và kết nối 5G.', 200, 15,'<h1>iPhone 12 Pro Apple A14 Bionic/6GB/128GB/6.1" Super Retina XDR OLED/iOS 15</h1>\r\n',262),
-(3, 'SP003', 'Redmi Note 10 Pro', 128, 'images/redminote10proxanh.jpg', 7990000, 'Redmi Note 10 Pro: Màn đẹp, chip mạnh, camera ấn tượng, pin trâu, giá tốt!', 365, 20,'<h1>Điện thoại Redmi Note 10 Pro Snapdragon 732G/6GB/128GB/6.67"AMOLED/Android 11</h1>\r\n',111),
-(4, 'SP004', 'Oppo Reno6', 128, 'images/opporeno6den.jpg', 11990000, 'OPPO Reno6: Điện thoại thời trang, camera selfie đỉnh cao, hiệu năng mạnh mẽ, giá tầm trung.', 156, 15,'<h1>Điện thoại Oppo Reno 6 5G Dimensity 1200/8GB/128GB/6.4"AMOLED/Android 11</h1>\r\n', 305),
-(5, 'SP005', 'Realme 8 Pro', 128, 'images/realme8provang.jpg', 8990000, 'Realme 8 Pro: Một chiếc smartphone với camera chất lượng cao và hiệu suất ổn định.', 449, 10,'<h1>Điện thoại Realme 8 Pro Snapdragon 720G/8GB/128GB/6.4"Super AMOLED/Android 11</h1>\r\n' ,222);
+(1, 'galaxys21den', 'Galaxy S21', 1, 'images/galaxys21den.jpg', 20990000, 'Samsung Galaxy S21: Smartphone 5G mạnh mẽ với màn hình 120Hz mượt mà, camera ấn tượng và thiết kế sang trọng.', 500, 10,'<h1>Điện thoại Samsung Galaxy S21 5G Snapdragon 888/8GB/128GB/6.2&quot;AMOLED/Android 11</h1>\r\n' ,252),
+(2, 'iphone12proxam', 'iPhone 12 Pro', 2, 'images/iphone12proxam.jpg', 31990000, 'iPhone 12 Pro: Chiếc điện thoại cao cấp với thiết kế sang trọng, hiệu năng mạnh mẽ, camera ấn tượng và kết nối 5G.', 200, 15,'<h1>iPhone 12 Pro Apple A14 Bionic/6GB/128GB/6.1" Super Retina XDR OLED/iOS 15</h1>\r\n',262),
+(3, 'redminote10proxanh', 'Redmi Note 10 Pro', 3, 'images/redminote10proxanh.jpg', 7990000, 'Redmi Note 10 Pro: Màn đẹp, chip mạnh, camera ấn tượng, pin trâu, giá tốt!', 365, 20,'<h1>Điện thoại Redmi Note 10 Pro Snapdragon 732G/6GB/128GB/6.67"AMOLED/Android 11</h1>\r\n',111),
+(4, 'opporeno6den', 'Oppo Reno6', 4, 'images/opporeno6den.jpg', 11990000, 'OPPO Reno6: Điện thoại thời trang, camera selfie đỉnh cao, hiệu năng mạnh mẽ, giá tầm trung.', 156, 15,'<h1>Điện thoại Oppo Reno 6 5G Dimensity 1200/8GB/128GB/6.4"AMOLED/Android 11</h1>\r\n', 305),
+(5, 'realme8provang', 'Realme 8 Pro',5, 'images/realme8provang.jpg', 8990000, 'Realme 8 Pro: Một chiếc smartphone với camera chất lượng cao và hiệu suất ổn định.', 449, 10,'<h1>Điện thoại Realme 8 Pro Snapdragon 720G/8GB/128GB/6.4"Super AMOLED/Android 11</h1>\r\n' ,222);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -379,21 +379,27 @@ a{
 	text-align:left;
     margin: 0 auto -30px;
     padding:0 0px 0px 0px;
-}
-
-
-#bigPic{
-	width:750px;
-	height:238px;
-	padding:1px;
 	
-	background-color:#FFF;
-	margin-bottom:10px;
 }
-#bigPic img{
-	position:absolute;
-	display:none;
+
+
+#bigPic {
+    width: 750px; /* Đặt chiều rộng của khung là 750px */
+    height: 238px; /* Đặt chiều cao của khung là 238px */
+    padding: 1px; /* Thêm đệm để tạo viền xung quanh khung */
+    background-color: #FFF; /* Màu nền của khung */
+    margin-bottom: 10px; /* Khoảng cách dưới của khung */
+    position: relative; /* Đặt vị trí tương đối để xử lý vị trí của các ảnh */
 }
+
+#bigPic img {
+    width: 100%; /* Ảnh sẽ rộng hết khung `#bigPic` */
+    height: 100%; /* Ảnh sẽ cao hết khung `#bigPic` */
+    position: absolute; /* Đặt vị trí tuyệt đối để các ảnh chồng lên nhau */
+    top: 0; /* Đặt vị trí top ở đỉnh của khung */
+    left: 0; /* Đặt vị trí left ở góc trái của khung */
+}
+
 ul#thumbs li.active{
 	border:2px solid #000;	
 	background:#fff;
