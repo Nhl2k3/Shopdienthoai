@@ -19,18 +19,18 @@ body {
 	font-weight:bold;
 }
 #PhanMenu1{
-	width: 305px;
+	width: 290px;
 	height: 30px;
 	color: white;
 	float:left;
 	background: #1e90ff;
-	
-	
-	
+	align-items: center;
+	display: flex;
+	padding-left: 15px;
 }
 
 #PhanMenu2{
-	width: 355px;
+	width: 340px;
 	height: 30px;
 	color: white;
 	float:left;
@@ -38,7 +38,9 @@ body {
 	vertical-align: middle;
 	background: #1e90ff;
 	font-size: 16px;
-	
+	align-items: center;
+	display: flex;
+	padding-left: 15px;
 }
 
 #PhanMenu3{
@@ -47,7 +49,6 @@ body {
 	color: white;
 	float:right;
 	background: #1e90ff;
-	
 }
 a.menu{
 	text-decoration:none;

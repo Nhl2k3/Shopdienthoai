@@ -5,7 +5,7 @@
             $search = addslashes($_POST['search']);
             // Dùng câu lênh like trong sql và sứ dụng toán tử % của php 
 			//để tìm kiếm dữ liệu chính xác hơn.
-            $sql = "select * from tbl_sanpham where TenSanPham like '%$search%' or CauHinh like '%$search%'";
+            $sql = "select * from tbl_sanpham where TenSanPham like '%".$search."%' or CauHinh like '%".$search."%'";
  
            
  
