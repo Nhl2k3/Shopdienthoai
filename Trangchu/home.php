@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Trang Chủ Shop Điện Thoại</title>
+		<title>Trang Tin Điện Tử</title>
 		<meta charset="utf-8" />
 	</head>
 	<body>
@@ -20,8 +20,8 @@
 		
 		
 
-$sql = "select t.ma_dien_thoai, t.model, t.MaNSX, t.hinh, t.gia, t.SoLuong, t.ti_le_gg, t.LuotXem, l.MaNSX, l.TenNSX
-  from (NhaSanXuat l inner join DienThoai t on t. MaNSXt=l. MaNSX)
+$sql = "select t.IdSanPham, t.TenSanPham, t.IdNhaSanXuat, t.HinhAnh, t.DonGia, t.SoLuong, t.MoTa, t.CauHinh, t.TiLeGiamGia, t.LuotXem, l.IdNhaSanXuat, l.TenNhaSanXuat
+  from (tbl_nhasanxuat l inner join tbl_sanpham t on t.IdNhaSanXuat=l.IdNhaSanXuat)
   order by LuotXem DESC Limit 0,".$limit_home_ok;		
 		
 		$danhsach = $connect->query($sql);
@@ -31,24 +31,24 @@ $sql = "select t.ma_dien_thoai, t.model, t.MaNSX, t.hinh, t.gia, t.SoLuong, t.ti
 			exit();
 		}
 		
-		$sql1 = "select * from (NhaSanXuat l inner join DienThoai t on t.MaNSX=l. MaNSX)";
+		$sql1 = "select * from (tbl_nhasanxuat l inner join tbl_sanpham t on t.IdNhaSanXuat=l.IdNhaSanXuat)";
 		$danhsach2 = $connect->query($sql1);
 		$count_kq = mysqli_num_rows($danhsach2);
 		
 		
 		while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
 		{				
-			$giaban = $row['gia'] - (($row['ti_le_gg'] /100) * $row[' gia']);
+			$giaban = $row['DonGia'] - (($row['TiLeGiamGia'] /100) * $row['DonGia']);
 			echo "<div class='khungsanpham'>";
 				echo "<div class='card'>";					
-					echo "<a href='index.php?do=dienthoai_thongsokythuat&id_ma_dien_thoai=" . $row['ma_dien_thoai'] . "&id_nsx=" . $row[' MaNSX'] . "'>";
-						echo "<img class='hinhanhphim' src=" . $row[" hinh"] . "  style='width: 190px; height: 140px;'>";
+					echo "<a href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>";
+						echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  style='width: 190px; height: 140px;'>";
 						echo "<span class='tenphim' ></span> <br />";
 					echo "</a>";
 					echo "<span class=\"luotxem\">". $row['LuotXem'] ." lượt xem </span><span class=\"giaban\">". number_format($giaban)." đ</span>";
-					echo "<br /><span class=\"luotxem\"></span><span class=\"dongia\">". number_format($row['gia'])." đ</span>";
+					echo "<br /><span class=\"luotxem\"></span><span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
 				echo "</div>";
-				echo "<p><a  href='index.php?do=dienthoai_thongsokythuat&id_ma_dien_thoai=" . $row['ma_dien_thoai'] . "&id_nsx=" . $row[' MaNSX'] . "'>" . $row['model'] . "</a></p>";
+				echo "<p><a  href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>" . $row['TenSanPham'] . "</a></p>";
 				
 			echo "</div>";
 			
