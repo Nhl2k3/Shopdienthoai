@@ -1,13 +1,11 @@
 body {
 	margin: 0;
 }
-
 #TrangWeb {
 	width: 1000px;
 	margin: 0 auto;
 	border: 1px solid #228B22;
 }
-
 #PhanDau {
 	width: 1000px;
 	height: 220px;
@@ -23,16 +21,11 @@ body {
 	height: 30px;
 	color: white;
 	float:left;
-<<<<<<< HEAD
-	background: #1e90ff;
-=======
 	background: purple;
->>>>>>> d0cf7c62a173c28f175784d3202f40081a0d0da4
 	align-items: center;
 	display: flex;
-	padding-left: 15px;
+	padding-left: 15px; 
 }
-
 #PhanMenu2{
 	width: 340px;
 	height: 30px;
@@ -46,20 +39,15 @@ body {
 	display: flex;
 	padding-left: 15px;
 }
-
 #PhanMenu3{
 	width: 325px;
 	height: 30px;
 	color: white;
 	float:right;
-<<<<<<< HEAD
-	background: #1e90ff;
-=======
 	background: purple;
 	align-items: center;
 	display: flex;
-	padding-left: 15px;
->>>>>>> d0cf7c62a173c28f175784d3202f40081a0d0da4
+	padding-left: 15px; 
 }
 a.menu{
 	text-decoration:none;
@@ -68,23 +56,18 @@ a.menu{
 	font-size: 16px;
 	
 }
-
 a.menu:hover {	
 	
 	font-size: 18px;
 	font-weight: bold;
 }
-
-
 #PhanGiua {
 	width: 1000px;
 }
-
 #BenTrai {
 	width: 180px;
 	float: left;
 }
-
 #BenTrai h3 {
 	font-size: 16px;
 	padding: 2px 0 0 5px;
@@ -93,7 +76,7 @@ a.menu:hover {
 	background-color: violet;
 	color: #ffffff;
 }
-
+ 
 h3.xemthem{
 	font-size: 16px;
 	padding: 2px 0 0 5px;
@@ -118,7 +101,7 @@ h3.xemthem{
 	color: pink;
 }
 
-#BenTrai ul li a:hover {	
+#BenTrai ul li a:hover {	 
 	color: #ff0000;
 	font-weight: bold;
 }
@@ -134,9 +117,6 @@ h3.xemthem{
 	margin-left: 5px;
 	
 }
-
-
-
 #BenPhai h3 {
 	font-size: 16px;
 	padding: 2px 0 0 5px;
@@ -145,10 +125,6 @@ h3.xemthem{
 	background-color: #99FFFF;
 	color: #FF3333;
 }
-
-
-
-
 #Giua h3 {
 	font-size: 16px;
 	padding: 2px 0 10px 0;
@@ -158,7 +134,6 @@ h3.xemthem{
 	margin-bottom: 0;
 	text-shadow: 2px 2px 3px #00FF00;
 }
-
 #Giua h4 {
 	font-size: 15px;
 	padding: 2px 0 10px 0;
@@ -168,7 +143,6 @@ h3.xemthem{
 	margin-bottom: 0;
 	text-shadow: 2px 2px 3px #FFD700;
 }
-
 #PhanCuoi {
 	width: 970px;
 	clear: both;
@@ -180,7 +154,6 @@ h3.xemthem{
 	border: 1px solid blue;
 	color: white;
 }
-
 #PhanCuoi table{
 	margin-left: 10px;
 }
@@ -189,48 +162,39 @@ h3.xemthem{
 	margin: 0;
 	color: #ff0000;
 }
-
 .ThongBao {
 	padding: 0;
 	margin: 0;
 	color: #0000ff;
 }
-
 .ThongTin {	
 	color: red;
 	font-weight: bold;
 }
-
 table.Form {
 	border-collapse: collapse;
 }
-
 table.Form th {
 	border: 0px solid #778899;
 	padding: 3px 2px 3px 2px;
 }
-
 table.Form td {
 	border: 0px solid #778899;
 	padding: 3px 2px 3px 2px;
 }
-
 table.DanhSach {
 	width: 100%;
 	border-collapse: collapse;
 }
-
 table.DanhSach th {
 	border: 1px solid #778899;
 	padding: 3px 2px 3px 2px;
 	background: #b0c4de;
 }
-
 table.DanhSach td {
 	border: 1px solid #778899;
 	padding: 3px 2px 3px 2px;
 }
-
 i
 textarea {
 	border-top: 1px dotted #808000;
@@ -238,7 +202,6 @@ textarea {
 	border-right: 1px dotted #808000;
 	border-bottom: 1px dotted #808000;
 }
-
 input[type=submit] {
 	margin-top: 1px;
 	border: 1px solid #808000;
@@ -247,32 +210,25 @@ input[type=submit] {
 	color:white;
 	font-weight:bold;
 }
-
 input.error {
 	border-bottom: 1px solid #ff0000;
 }
-
 select.error {
 	border-bottom: 1px solid #ff0000;
 }
-
 textarea.error {
 	border-top: 1px solid #ff0000;
 	border-left: 1px solid #ff0000;
 	border-right: 1px solid #ff0000;
 	border-bottom: 1px solid #ff0000;
 }
-
 label.error {
 	color: #ff0000;
 }
-
-
 span.requirefield {
 	color: #FF0000;
 	font-size: 12px;
 }
-
 span.luotxem{
 	color: blue;
 	font-size: 16px;
@@ -299,7 +255,6 @@ span.giaban{
 	color: #ff0000;
 	font-size:16pt;
 }
-
 p.requirefields {
 	color: #FF0000;
 	font-style: italic;
@@ -328,9 +283,6 @@ p.requirefields {
 	width:0px;
 	height:12px;
 }
-
-
-
 #menudung ul {
   background: white;
   width: 178px;
@@ -338,10 +290,7 @@ p.requirefields {
   list-style: none;
   text-align: left;			  
   
-
-
 }
-
 #menudung li {
   width: auto;
   height: 30px;
@@ -350,7 +299,6 @@ p.requirefields {
   
   padding: 0 1em;
 }
-
 #menudung li a {
   text-decoration: none;
   color: #333;
@@ -365,7 +313,6 @@ p.requirefields {
  position: relative;
  font-size:12pt;
 }
-
 #menudung .sub-menu {
  position: absolute;
  left: 178px;
@@ -376,13 +323,9 @@ p.requirefields {
 	display: block;
 	font-size:13pt;
 }
-
 a{
 	text-decoration: none;
 }
-
-
-
 #wrapper{
     width:750px;
     min-height: 96%;
@@ -393,8 +336,6 @@ a{
     padding:0 0px 0px 0px;
 	
 }
-
-
 #bigPic {
     width: 750px; /* Đặt chiều rộng của khung là 750px */
     height: 238px; /* Đặt chiều cao của khung là 238px */
@@ -403,7 +344,6 @@ a{
     margin-bottom: 10px; /* Khoảng cách dưới của khung */
     position: relative; /* Đặt vị trí tương đối để xử lý vị trí của các ảnh */
 }
-
 #bigPic img {
     width: 100%; /* Ảnh sẽ rộng hết khung `#bigPic` */
     height: 100%; /* Ảnh sẽ cao hết khung `#bigPic` */
@@ -411,7 +351,6 @@ a{
     top: 0; /* Đặt vị trí top ở đỉnh của khung */
     left: 0; /* Đặt vị trí left ở góc trái của khung */
 }
-
 ul#thumbs li.active{
 	border:2px solid #000;	
 	background:#fff;
@@ -440,15 +379,12 @@ ul#thumbs img{
 	
 	z-index:1;		
 }
-
 .khungsanpham
 {
 	width: 250px;
     height: 260px;	
 	float: left;
 }
-
-
 .card {
     width: 234px;
     height: 200px;
@@ -482,7 +418,6 @@ ul#thumbs img{
     transition: transform 0.3s;
     text-align: center;
   }
-
   .card_moivenew:hover {
     transform: scale(0.9);
   }
