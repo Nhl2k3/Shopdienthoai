@@ -1,3 +1,5 @@
+
+
 <?php
         if (isset($_REQUEST['ok'])) {
  
@@ -5,7 +7,7 @@
             $search = addslashes($_POST['search']);
             // Dùng câu lênh like trong sql và sứ dụng toán tử % của php 
 			//để tìm kiếm dữ liệu chính xác hơn.
-            $sql = "select * from tbl_sanpham where TenSanPham like '%".$search."%' or CauHinh like '%".$search."%'";
+            $sql = "select * from tbl_sanpham where TenSanPham like '%$search%' or CauHinh like '%$search%'";
  
            
  
@@ -52,8 +54,16 @@
 						
 					}
 		
-                } else 
-                    echo "Không tìm thấy kết quả!";
-				}
-			}
-        ?>   
+
+
+		if($count_sp_nsx > $_SESSION['limit'])
+		{
+			echo "<h3 class=\"xemthem\"><a href='index.php?do=sanpham_nhasanxuat&id_nsx=" . $row1['IdNhaSanXuat'] . "&limit=ok'>Xem thêm các sản phẩm của <b>". $row1['TenNhaSanXuat']."</b></a></h3></td>";
+		
+		}
+
+						
+	
+?>
+
+</table>

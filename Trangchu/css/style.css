@@ -23,7 +23,11 @@ body {
 	height: 30px;
 	color: white;
 	float:left;
+<<<<<<< HEAD
 	background: #1e90ff;
+=======
+	background: purple;
+>>>>>>> d0cf7c62a173c28f175784d3202f40081a0d0da4
 	align-items: center;
 	display: flex;
 	padding-left: 15px;
@@ -36,7 +40,7 @@ body {
 	float:left;
 	text-align:left;
 	vertical-align: middle;
-	background: #1e90ff;
+	background: purple;
 	font-size: 16px;
 	align-items: center;
 	display: flex;
@@ -44,11 +48,18 @@ body {
 }
 
 #PhanMenu3{
-	width: 340px;
+	width: 325px;
 	height: 30px;
 	color: white;
 	float:right;
+<<<<<<< HEAD
 	background: #1e90ff;
+=======
+	background: purple;
+	align-items: center;
+	display: flex;
+	padding-left: 15px;
+>>>>>>> d0cf7c62a173c28f175784d3202f40081a0d0da4
 }
 a.menu{
 	text-decoration:none;
@@ -79,7 +90,7 @@ a.menu:hover {
 	padding: 2px 0 0 5px;
 	margin-bottom: 0;
 	margin-top: 1px;
-	background-color: #228B22;
+	background-color: violet;
 	color: #ffffff;
 }
 
@@ -104,7 +115,7 @@ h3.xemthem{
 
 #BenTrai ul li a {
 	text-decoration: none;
-	color: #0000ff;
+	color: pink;
 }
 
 #BenTrai ul li a:hover {	
@@ -114,7 +125,7 @@ h3.xemthem{
 
 #BenTrai ul li a:visited {
 	text-decoration: none;
-	color: #0000ff;
+	color: red;
 }
 
 #Giua {
