@@ -40,7 +40,7 @@
 			</div>
 			
 			<div id="PhanMenu3">
-				<form action="index.php?do=sanpham_nhasanxuat" method="post">
+				<form action="index.php?do=search_xuly" method="post">
 					Tìm kiếm: <input type="text" name="search" />
 					<input type="submit" name="ok" value="search" />
 				</form>
