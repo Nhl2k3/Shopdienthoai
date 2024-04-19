@@ -32,12 +32,13 @@ USE `shopdienthoai`;
 
 DROP TABLE IF EXISTS `tbl_nguoidung`;
 CREATE TABLE `tbl_nguoidung` (
-  `MaNguoiDung` int(10) NOT NULL,
+  `MaNguoiDung` int(10) NOT NULL AUTO_INCREMENT,
   `TenNguoiDung` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `TenDangNhap` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `MatKhau` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `QuyenHan` tinyint(1) NOT NULL,
-  `Khoa` tinyint(1) NOT NULL
+  `Khoa` tinyint(1) NOT NULL,
+   PRIMARY KEY (`MaNguoiDung`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
