@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Trang Tin Điện Tử</title>
+		<title>Trang Chủ Shop Điện Thoại</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
@@ -78,10 +78,10 @@
 					
 				
 				
-					<h3>Chức năng khác</h3>
+					<h3>Hỗ trợ khách hàng</h3>
 					<ul>
-						<li>...........</li>
-						<li>...........</li>
+						<li><a>Đăng nhập</a></li>
+						<li><a href="index.php">Đăng ký</a></li>				
 					</ul>
 					
 								
