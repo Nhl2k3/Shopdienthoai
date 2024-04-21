@@ -1,10 +1,12 @@
 body {
 	margin: 0;
+	background-color: whitesmoke;
 }
 #TrangWeb {
 	width: 1000px;
 	margin: 0 auto;
-	border: 1px solid #228B22;
+	border: 1px solid red !important;
+
 }
 #PhanDau {
 	width: 1000px;
@@ -16,6 +18,7 @@ body {
 	font-size: 16px;
 	font-weight:bold;
 	background-size: cover;
+	background-position: center;
 }
 #PhanMenu1{
 	width: 290px;
@@ -26,6 +29,7 @@ body {
 	align-items: center;
 	display: flex;
 	padding-left: 15px; 
+	background-color: #8C3852;
 }
 #PhanMenu2{
 	width: 340px;
@@ -50,6 +54,13 @@ body {
 	display: flex;
 	padding-left: 15px; 
 }
+
+#PhanMenu3 form input{
+	border-radius: 5px;
+	border: none;
+	padding-left: 5px;
+}
+
 a.menu{
 	text-decoration:none;
 	text-align: center;
@@ -73,8 +84,8 @@ a.menu:hover {
 	font-size: 16px;
 	padding: 2px 0 0 5px;
 	margin-bottom: 0;
-	margin-top: 1px;
-	background-color: violet;
+	margin-top: 5px;
+	background-color: brown;
 	color: #ffffff;
 }
  
@@ -95,6 +106,7 @@ h3.xemthem{
 	padding-top: 5px;
 	padding-bottom: 8px;
 	border: 1px solid #228B22;
+	background-color: rgb(250, 232, 225);
 }
 
 #BenTrai ul li a {
@@ -205,11 +217,12 @@ textarea {
 }
 input[type=submit] {
 	margin-top: 1px;
-	border: 1px solid #808000;
+	border: 1px solid brown;
 	padding: 3px 5px 3px 5px;
-	background-color: #FF33CC;
+	background-color: brown;
 	color:white;
 	font-weight:bold;
+	border-radius: 4px;
 }
 input.error {
 	border-bottom: 1px solid #ff0000;
@@ -297,7 +310,7 @@ p.requirefields {
   height: 30px;
   line-height: 40px;
   border-bottom: 1px solid #e8e8e8;
-  
+  background-color: rgb(250, 232, 225);
   padding: 0 1em;
 }
 #menudung li a {
@@ -338,10 +351,10 @@ a{
 	
 }
 #bigPic {
-    width: 750px; /* Đặt chiều rộng của khung là 750px */
+    width: 785px; /* Đặt chiều rộng của khung là 750px */
     height: 238px; /* Đặt chiều cao của khung là 238px */
     padding: 1px; /* Thêm đệm để tạo viền xung quanh khung */
-    background-color: #FFF; /* Màu nền của khung */
+    background-color: whitesmoke; /* Màu nền của khung */
     margin-bottom: 10px; /* Khoảng cách dưới của khung */
     position: relative; /* Đặt vị trí tương đối để xử lý vị trí của các ảnh */
 }
@@ -349,9 +362,11 @@ a{
     width: 100%; /* Ảnh sẽ rộng hết khung `#bigPic` */
     height: 100%; /* Ảnh sẽ cao hết khung `#bigPic` */
     position: absolute; /* Đặt vị trí tuyệt đối để các ảnh chồng lên nhau */
-    top: 0; /* Đặt vị trí top ở đỉnh của khung */
-    left: 0; /* Đặt vị trí left ở góc trái của khung */
+    top: 5px; /* Đặt vị trí top ở đỉnh của khung */
+    left: -12px; /* Đặt vị trí left ở góc trái của khung */
+	border-radius: 15px;
 }
+
 ul#thumbs li.active{
 	border:2px solid #000;	
 	background:#fff;
@@ -389,7 +404,7 @@ ul#thumbs img{
 .card {
     width: 234px;
     height: 200px;
-   
+   	background-color: white;
     margin: 8px;
     padding: auto;
     border-radius: 5px;
