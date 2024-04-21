@@ -22,7 +22,7 @@ body {
 	height: 30px;
 	color: white;
 	float:left;
-	background: purple;
+	background: #8C3852;
 	align-items: center;
 	display: flex;
 	padding-left: 15px; 
@@ -34,7 +34,7 @@ body {
 	float:left;
 	text-align:left;
 	vertical-align: middle;
-	background: purple;
+	background: #8C3852;
 	font-size: 16px;
 	align-items: center;
 	display: flex;
@@ -45,7 +45,7 @@ body {
 	height: 30px;
 	color: white;
 	float:right;
-	background: purple;
+	background: #8C3852;
 	align-items: center;
 	display: flex;
 	padding-left: 15px; 
