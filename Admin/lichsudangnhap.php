@@ -44,10 +44,10 @@
                 $stt = 1;
                 while ($row = $result_lichsu->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td>" . $stt++ . "</td>";
-                    echo "<td>" . $row['TenNguoiDung'] . "</td>";
-                    echo "<td>" . $row['ThoiGianDangNhap'] . "</td>";
-                    echo "<td>" . $row['DiaChiIP'] . "</td>";
+                    echo "<td align='center'>" . $stt++ . "</td>";
+                    echo "<td align='center'>" . $row['TenNguoiDung'] . "</td>";
+                    echo "<td align='center'>" . $row['ThoiGianDangNhap'] . "</td>";
+                    echo "<td align='center'>" . $row['DiaChiIP'] . "</td>";
                     echo "</tr>";
                     
                     // Tăng biến đếm số lần lặp

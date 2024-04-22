@@ -3,19 +3,19 @@
 	<table class="FormDangBaiViet">
 		<tr>
 			<td>
-				<span class="MyFormLabel">Mã sản phẩm:</span>
+				<span class="MyFormLabel">Mã sản phẩm: </span>
 				<input type="text" name="MaSanPham" size = " 60" />
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<span class="MyFormLabel">Tên sản phẩm:</span>
+				<span class="MyFormLabel">Tên sản phẩm: 	</span>
 				<input type="text" name="TenSanPham" size = " 60" />
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<span class="MyFormLabel">Nhà Sản Xuất:</span>
+				<span class="MyFormLabel">Nhà sản xuất: </span>
 				<select name="IdNhaSanXuat">
 					<option value="">-- Chọn --</option>
 					<?php
@@ -39,29 +39,29 @@
 		</tr>
 		<tr>
 			<td>
-				<span class="MyFormLabel">Mô Tả:</span>
+				<span class="MyFormLabel">Mô tả:  </span>
 				<textarea name="MoTa" cols="50"></textarea>
 			</td>
 		</tr>
 		<tr>        
-			<td>Hình ảnh<input type="file" name="HinhAnh"></td>
+			<td>Hình ảnh    <input type="file" name="HinhAnh"></td>
 		</tr>		
 		
 		<tr>
        
-			<td>Đơn Giá<input type="text" name="DonGia" size="50"></td>
+			<td>Đơn giá:  <input type="text" name="DonGia" size="50"></td>
 		</tr>
 		<tr>
        
-			<td>Số Lượng<input type="text" name="SoLuong" size="50"></td>
+			<td>Số lượng:  <input type="text" name="SoLuong" size="50"></td>
 		</tr>
 		<tr>
        
-			<td>Tỉ Lệ Giảm Giá<input type="text" name="TiLeGiamGia" size="50"></td>
+			<td>Tỉ lệ giảm giá:   <input type="text" name="TiLeGiamGia" size="50"></td>
 		</tr>
 		<tr>
 			<td>
-				<span class="MyFormLabel">Cấu Hình:</span>
+				<span class="MyFormLabel">Cấu hình:</span>
 				
 				<textarea name="CauHinh" id="CauHinh"></textarea>				
 				<script>CKEDITOR.replace('CauHinh');</script>

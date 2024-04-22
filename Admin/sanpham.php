@@ -23,10 +23,10 @@
 		$stt = 1;
 		while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) {	
 			echo "<tr>";
-				echo "<td>" . $stt . "</td>";
-				echo "<td>" . $dong['MaSanPham'] . "</td>";
-				echo "<td><a href='index.php?do=sanpham_chitiet&id=" . $dong['MaSanPham'] . "'>" . $dong['TenSanPham'] . "</a></td>";
-				echo "<td>" . $dong['TenNhaSanXuat'] . "</td>";
+				echo "<td align='center'>" . $stt . "</td>";
+				echo "<td align='center'>" . $dong['MaSanPham'] . "</td>";
+				echo "<td align='center'><a href='index.php?do=sanpham_chitiet&id=" . $dong['MaSanPham'] . "'>" . $dong['TenSanPham'] . "</a></td>";
+				echo "<td align='center'>" . $dong['TenNhaSanXuat'] . "</td>";
 				echo "<td><img src='".$dong['HinhAnh']."' width='100'/></td>";
 
 				echo "<td align='center'><a href='index.php?do=sanpham_sua&id=" . $dong['MaSanPham'] . "'><img src='images/edit.png' /></a></td>";

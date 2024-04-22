@@ -18,12 +18,11 @@
 	</head>
 	<body>
 		<div id="TrangWeb">
-			<div id="PhanDau">	
-			
+			<div id="PhanDau">
 				<?php
 					if(isset($_SESSION['MaND']) && isset($_SESSION['HoTen']))
 					{
-					echo "<br><br><br><br><br>Xin chào ".$_SESSION['HoTen']." &nbsp;&nbsp;|| &nbsp;&nbsp;";
+					echo "<br><br><br><br><br><br><br><br><br>Xin chào ".$_SESSION['HoTen']." &nbsp;&nbsp;|| &nbsp;&nbsp;";
 						echo '<a href="index.php?do=dangxuat">Đăng xuất</a>'."&nbsp;&nbsp;";
 					}
 				?>				

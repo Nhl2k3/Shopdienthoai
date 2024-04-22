@@ -1,26 +1,29 @@
 body {
 	margin: 0;
-
+	background-color: whitesmoke;
 }
 
 #TrangWeb {
 	width: 900px;
 	margin: 0 auto;
-	border: 1px solid blue;
+	border: 1px solid red;
 }
 
 #PhanDau {
 	width: 900px;
-	height: 120px;
+	height: 200px;
 	background: url(../images/banner_dienthoai.jpg);
-	color:yellow;
+	color: cyan;
 	font-size: 16px;
 	font-weight:bold;	
 	text-align: right;
+	background-size: auto;
+	background-position: center;
 }
 
 a{
 	text-decoration: none;
+	color: blueviolet;
 }
 #PhanGiua {
 	width: 900px;
@@ -32,11 +35,11 @@ a{
 }
 
 #BenTrai h3 {
-	font-size: 20px;
+	font-size: 15px;
 	padding: 2px 0 0 5px;
 	margin-bottom: 0;
 	margin-top: 8px;
-	background-color: #228B22;
+	background-color: brown;
 	color: #ffffff;
 }
 
@@ -48,7 +51,8 @@ a{
 	padding-left: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	border: 1px solid #228B22;
+	border: 1px solid red;
+	background-color: #FAE8E1;
 }
 
 #BenTrai ul li a {
@@ -63,7 +67,7 @@ a{
 
 #BenTrai ul li a:visited {
 	text-decoration: none;
-	color: #0000ff;
+	color: red;
 }
 
 #BenPhai {
@@ -74,11 +78,11 @@ a{
 #BenPhai h3 {
 	font-size: 20px;
 	padding: 2px 0 10px 0;
-	color: #4169E1;
+	color: rgb(55, 55, 202);
 	font-family: Tahoma;
 	margin-top: 8px;
 	margin-bottom: 0;
-	text-shadow: 2px 2px 3px #00FF00;
+	text-shadow: 2px 2px 3px rgb(7, 239, 239);
 }
 
 #BenPhai h4 {
@@ -138,6 +142,7 @@ table.Form td {
 table.DanhSach {
 	width: 100%;
 	border-collapse: collapse;
+	background-color: white;
 }
 
 table.DanhSach th {

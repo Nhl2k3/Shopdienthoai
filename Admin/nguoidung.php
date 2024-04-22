@@ -23,11 +23,11 @@
 		while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) 
 		{			
 			echo "<tr  bgcolor='#ffffff' onmouseover='this.style.background=\"#dee3e7\"' onmouseout='this.style.background=\"#ffffff\"'>";
-				echo "<td>" . $dong["MaNguoiDung"] . "</td>";
-				echo "<td>" . $dong["TenNguoiDung"] . "</td>";
-				echo "<td>" . $dong["TenDangNhap"] . "</td>";
+				echo "<td align='center'>" . $dong["MaNguoiDung"] . "</td>";
+				echo "<td align='center'>" . $dong["TenNguoiDung"] . "</td>";
+				echo "<td align='center'>" . $dong["TenDangNhap"] . "</td>";
 				
-				echo "<td>";
+				echo "<td align='center'>";
 					if($dong["QuyenHan"] == 1)
 						echo "Quản trị (<a href='index.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
 					else

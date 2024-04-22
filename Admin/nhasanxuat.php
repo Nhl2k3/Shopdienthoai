@@ -17,8 +17,8 @@
 	<?php
 		while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) {		
 			echo "<tr  bgcolor='#ffffff' onmouseover='this.style.background=\"#dee3e7\"' onmouseout='this.style.background=\"#ffffff\"'>";
-				echo "<td>" . $dong["IdNhaSanXuat"] . "</td>";
-				echo "<td>" . $dong["TenNhaSanXuat"] . "</td>";
+				echo "<td align='center'>" . $dong["IdNhaSanXuat"] . "</td>";
+				echo "<td align='center'>" . $dong["TenNhaSanXuat"] . "</td>";
 				echo "<td align='center'><a href='index.php?do=nhasanxuat_sua&id=" . $dong["IdNhaSanXuat"] . "'><img src='images/edit.png' /></a></td>";
 				echo "<td align='center'><a href='index.php?do=nhasanxuat_xoa&id=" . $dong["IdNhaSanXuat"] . "' onclick='return confirm(\"Bạn có muốn xóa chủ đề " . $dong['TenNhaSanXuat'] . " không?\")'><img src='images/delete.png' /></a></td>";
 			echo "</tr>";
