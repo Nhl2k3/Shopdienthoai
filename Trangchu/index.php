@@ -74,10 +74,7 @@
 					   </ul>
 						
 					</div>	
-					
-					
-				
-				
+									
 					<h3>Hỗ trợ khách hàng</h3>
 					<ul>						
 						<li><a href="../Admin/index.php?do=dangnhap">Đăng nhập</a></li>			

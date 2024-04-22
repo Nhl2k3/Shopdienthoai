@@ -22,7 +22,6 @@
             ThongBaoLoi("Lỗi: " . $sql_capnhat . "<br>" . $connect->error);
         }
     }
-
     // Đóng kết nối CSDL
     $connect->close();
 ?>

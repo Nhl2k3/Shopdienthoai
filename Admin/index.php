@@ -1,7 +1,8 @@
 <?php
 	//session_set_cookie_params(30); // 1800 giây = 30 phút
-	session_start();
-	
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
 	
 	include_once "cauhinh.php";
 	
@@ -10,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Trang Tin Điện Tử</title>
+		<title>Trang Admin Shop</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="scripts/ckeditor/ckeditor.js"></script>
@@ -63,15 +64,22 @@
 							echo '<li><a href="index.php?do=hosocanhan">Hồ sơ cá nhân</a></li>';
 							echo '<li><a href="index.php?do=doimatkhau">Đổi mật khẩu</a></li>';
 						echo '</ul>';
-					}								
+					}
+			
+					
+					if(isset($_SESSION['MaND']))
+					{
+						echo '<h3>Chức năng khác</h3>';
+						echo '<ul>';						
+							echo '<li><a href="index.php?do=lichsudangnhap">Lịch sử đăng nhập</a></li>';
+						
+						echo '</ul>';
+					}
+					
 					?>
+				
 					
 					
-					<h3>Chức năng khác</h3>
-					<ul>
-						<li><a href="">.......</a></li>
-						<li><a href="">.......</a></li>
-					</ul>
 					
 					
 				</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Trang Tin Điện Tử</title>
+		<title>Trang Chủ Shop Điện Thoại</title>
 		<meta charset="utf-8" />
 	</head>
 	<body>

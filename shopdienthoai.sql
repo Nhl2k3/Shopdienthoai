@@ -52,10 +52,30 @@ INSERT INTO `tbl_nguoidung` (`MaNguoiDung`, `TenNguoiDung`, `TenDangNhap`, `MatK
 (4, 'Phạm Thị D', 'ptd', 'e10adc3949ba59abbe56e057f20f883e', 3, 0);
 
 -- --------------------------------------------------------
+CREATE TABLE `tbl_lichsudangnhap` (
+  `MaLichSuDangNhap` int(10) NOT NULL AUTO_INCREMENT,
+  `MaNguoiDung` int(10) NOT NULL,
+  `TenNguoiDung` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `ThoiGianDangNhap` datetime NOT NULL,
+  `DiaChiIP` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`MaLichSuDangNhap`),
+  CONSTRAINT `FK_NguoiDung_LichSuDangNhap` FOREIGN KEY (`MaNguoiDung`) REFERENCES `tbl_nguoidung` (`MaNguoiDung`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 
 --
+INSERT INTO tbl_lichsudangnhap (MaNguoiDung, TenNguoiDung, ThoiGianDangNhap, DiaChiIP) VALUES
+(1, 'Nguyễn Văn A', '2024-04-22 08:00:00', '192.168.1.1'),
+(2, 'Trần Thị B', '2024-04-22 08:15:00', '192.168.1.2'),
+(3, 'Lê Văn C', '2024-04-22 08:30:00', '192.168.1.3');
+
+
+
+
 -- Table structure for table `tbl_nhasanxuat`
 --
+
+
 
 DROP TABLE IF EXISTS `tbl_nhasanxuat`;
 CREATE TABLE `tbl_nhasanxuat` (
