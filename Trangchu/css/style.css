@@ -141,11 +141,11 @@ h3.xemthem{
 #Giua h3 {
 	font-size: 16px;
 	padding: 2px 0 10px 0;
-	color: #4169E1;
+	color: rgb(55, 55, 202);
 	font-family: Tahoma;
 	margin-top: 8px;
 	margin-bottom: 0;
-	text-shadow: 2px 2px 3px #00FF00;
+	text-shadow: 2px 2px 3px rgb(7, 239, 239);
 }
 #Giua h4 {
 	font-size: 15px;
@@ -160,11 +160,11 @@ h3.xemthem{
 	width: 970px;
 	clear: both;
 	height: 100px;
-	background: #1e90ff;	
+	background: #8C3852;	
 	padding: 15px;
 	height: 120px;
 	font-size: 15px;
-	border: 1px solid blue;
+	border: 1px solid red;
 	color: white;
 }
 #PhanCuoi table{

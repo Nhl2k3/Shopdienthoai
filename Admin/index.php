@@ -91,7 +91,7 @@
 				</div>
 			</div>
 			<div id="PhanCuoi">
-				<div class="lienhe">Liên hệ: tva@agu.edu.vn </div>
+				<div class="lienhe">Liên hệ: 0945841265 || Email: wibu@agu.edu.vn</div>
 			</div>
 		</div>
 	</body>
