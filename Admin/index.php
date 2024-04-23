@@ -42,11 +42,10 @@
 					else
 					{
 						echo '<h3>Quản lý</h3>';
-						echo '<ul>';						
-							echo '<li><a href="index.php?do=sanpham_them">Thêm sản phẩm</a></li>';
-								
+						echo '<ul>';																				
 							if($_SESSION['QuyenHan'] == 1)
 							{
+								echo '<li><a href="index.php?do=sanpham_them">Thêm sản phẩm</a></li>';
 								echo '<li><a href="index.php?do=nhasanxuat">Danh sách nhà sản xuất </a></li>';
 								echo '<li><a href="index.php?do=sanpham">Danh sách sản phẩm</a></li>';
 								echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';

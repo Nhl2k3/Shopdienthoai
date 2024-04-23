@@ -63,6 +63,8 @@ CREATE TABLE `tbl_lichsudangnhap` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
+ALTER TABLE tbl_lichsudangnhap MODIFY COLUMN ThoiGianDangNhap TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
 --
 INSERT INTO tbl_lichsudangnhap (MaNguoiDung, TenNguoiDung, ThoiGianDangNhap, DiaChiIP) VALUES
 (1, 'Nguyễn Văn A', '2024-04-22 08:00:00', '192.168.1.1'),

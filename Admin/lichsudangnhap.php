@@ -37,6 +37,7 @@
             <th>STT</th>
             <th>Tên người dùng</th>
             <th>Thời gian đăng nhập</th>
+            <th>Thời gian đăng nhập cách đây</th>
             <th>Địa chỉ IP</th>
         </tr>
         <?php
@@ -47,6 +48,14 @@
                     echo "<td align='center'>" . $stt++ . "</td>";
                     echo "<td align='center'>" . $row['TenNguoiDung'] . "</td>";
                     echo "<td align='center'>" . $row['ThoiGianDangNhap'] . "</td>";
+                    
+                    // Tính toán thời gian đăng nhập cách đây
+                    $thoi_gian_hien_tai = time();
+                    $thoi_gian_dang_nhap = strtotime($row['ThoiGianDangNhap']);
+                    $thoi_gian_cach_day = $thoi_gian_hien_tai - $thoi_gian_dang_nhap;
+                    $gio_cach_day = floor($thoi_gian_cach_day / (60 * 60));
+                    echo "<td align='center'>" . $gio_cach_day . " giờ trước</td>";
+                    
                     echo "<td align='center'>" . $row['DiaChiIP'] . "</td>";
                     echo "</tr>";
                     
@@ -59,7 +68,7 @@
                     }
                 }
             } else {
-                echo "<tr><td colspan='4'>Không có lịch sử đăng nhập</td></tr>";
+                echo "<tr><td colspan='5'>Không có lịch sử đăng nhập</td></tr>";
             }
         ?>
     </table>
